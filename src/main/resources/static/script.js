@@ -67,9 +67,19 @@ async function salvarCliente(event) {
         });
 
         if (!response.ok) {
-            const erroTexto = await response.text();
+            let erroTexto;
+            try {
+                // Tenta converter a resposta para JSON
+                erroTexto = await response.json();
+            } catch (err) {
+                // Caso a resposta não seja JSON, usa o texto
+                erroTexto = await response.text();
+            }
+
+            // Agora, erroTexto será a mensagem diretamente
             console.error("Erro da API:", erroTexto);
-            throw new Error('Erro ao salvar cliente');
+            alert(erroTexto);  // Exibe a mensagem de erro corretamente
+            throw new Error(erroTexto);  // Lança o erro com a mensagem
         }
 
         alert("Cliente salvo com sucesso!");
@@ -77,7 +87,6 @@ async function salvarCliente(event) {
         carregarClientes();
     } catch (error) {
         console.error('Erro:', error);
-        alert('Erro ao salvar cliente. Tente novamente.');
     }
 }
 
