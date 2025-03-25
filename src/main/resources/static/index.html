@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Clientes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="container">
+        <!-- cabeçalho da pagina -->
+        <header class="header">
+            <h1>Gestão de Clientes</h1>
+            <button onclick="abrirModal()" id="new">Adicionar Cliente</button>
+        </header>
+
+        <!-- Botão de pesquisa -->
+        <section class="searchContainer">
+            <div class="search">
+                <label for="pesquisaCliente">Pesquisar Cliente</label>
+                <input type="text" id="pesquisaCliente" placeholder="Cliente" aria-describedby="Cliente">
+                <button type="button" id="btnPesquisarCliente">Pesquisar</button>
+            </div>
+            <ul id="sugestoes" class="sugestoesLista"></ul>
+        </section>
+
+        <!-- Lista de Clientes -->
+        <section class="divTable">
+            <table>
+                <caption>Lista de Clientes</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Nome</th>
+                        <th scope="col">CPF</th>
+                        <th scope="col">Data de Nascimento</th>
+                        <th scope="col">Endereço</th>
+                        <th scope="col" class="acao">Editar</th>
+                        <th scope="col" class="acao">Excluir</th>
+                    </tr>
+                </thead>
+                <tbody id="clientesTabela"></tbody>
+            </table>
+        </section>
+
+        <!-- Modal de criação e edição de clientes -->
+        <div class="modalContainer" id="modalCliente" role="dialog" aria-labelledby="modalClienteTitle">
+            <div class="modal">
+                <button class="fechar" aria-label="Fechar" onclick="fecharModal()">
+                    <i class='bx bx-x'></i>
+                </button>
+                <h2 id="modalClienteTitle">Adicionar Cliente</h2>
+                <form id="formCliente">
+                    <input type="hidden" id="idCliente">
+
+                    <label for="nome">Nome</label>
+                    <input class="modalInput" type="text" id="nome" name="nome" required>
+    
+                    <label for="cpf">CPF</label>
+                    <input class="modalInput" type="text" id="cpf" name="cpf" required>
+    
+                    <label for="dataNascimento">Data de Nascimento</label>
+                    <input class="modalInput" type="date" id="dataNascimento" name="dataNascimento" required>
+    
+                    <label for="endereco">Endereço</label>
+                    <input class="modalInput"type="text" id="endereco" name="endereco" required>
+    
+                    <fieldset>
+                        <legend>Contatos</legend>
+                        <div id="contatosContainer">
+                            <!-- Campos de contato dinâmicos -->
+                        </div>
+                        <button class="btnModal" type="button" id="addContato">Adicionar Contato</button>
+                    </fieldset>
+                    <button class="btnModal" type="submit" id="btnSalvar">Salvar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
