@@ -116,6 +116,17 @@ Acredito que este projeto reflete a minha capacidade de resolver problemas, apli
 
 Estou ansioso para aplicar esses conhecimentos e continuar desenvolvendo minhas habilidades profissionais.
 
+## Referências
+- [Boxicons - 2.1.1](https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css) - Biblioteca de ícones simples e leve para uso em projetos web.
+- [Spring Boot Documentation](https://spring.io/projects/spring-boot) - Documentação oficial do Spring Boot.
+- [Spring Boot Accessing data with Mysql](https://spring.io/guides/gs/accessing-data-mysql) - Documentação para usar Mysql com Spring Boot
+- [Spring Boot CRUD 2024 Java MySQL Backend](https://www.youtube.com/watch?v=68EIdHbE74U) - Video do Youtube.
+- [[ADI #1] - Criando um CRUD com Java Spring Boot e MySQL](https://www.youtube.com/watch?v=Tnl4YnB6E54&t=359s) - Video do Youtube.
+- [MySQL Documentation](https://dev.mysql.com/doc/) - Documentação oficial do MySQL.
+- [MDN Web Docs](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript) - Documentação JavaScript.
+- [W3 Schools](https://www.w3schools.com/js/js_htmldom_document.asp)- Documentação JavaScript.
+- [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) - Documentação da Fetch API.
+
 ## Autor
 Desenvolvido por Daniel Almeida Andrade.
 
